@@ -24,11 +24,11 @@ const connect = function() {
     // },4000);
     console.log("Successfully connected to game server");
   });
-  
+
   conn.on("data", (data) => {
     console.log("Server says:", data);
   });
-  
+
   conn.on("end", () => {
     console.log("Connection closed by the server");
   });
