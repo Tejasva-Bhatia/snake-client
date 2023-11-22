@@ -14,13 +14,14 @@ const connect = function() {
 
   conn.on("connect", () => {
     // code that does something when the connection is first established
-    console.log("Connected to server");
+    conn.write("Name: Yo🤘");
+    console.log("Successfully connected to game server");
   });
-
+  
   conn.on("data", (data) => {
     console.log("Server says:", data);
   });
-
+  
   conn.on("end", () => {
     console.log("Connection closed by the server");
   });
